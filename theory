@@ -1,0 +1,91 @@
+IoT Based Weather Monitoring System using NodeMCU ESP8622 and ThingSpeak
+An environmental station could be tagged as a setting, providing us with the retrieved data of the surrounding weather in our local neighborhood.For example, this device can offer the user with details about our surrounding environment’s temperature, pressure, humidity, rain level etc. Hence, this instrumental setup fundamentally uses the sensors to calculate the variations in temperature, barometric pressure, humidity, rain level. In this device we use several types of sensors, which are all used to record the above-mentioned parameters. This device could be suitable to record the temperature & pressure of a detailed room. Through the aid of this temperature & pressure sensors we could analyse the recorded parameter data, such as the dew point. We can also record the barometric pressure inside the room’s environment.  We could also record the rain level value. The very idea behind this prototype is based on the Wi-Fi based ESP8266 module Nodemcu (12E). The other three sensor devices are associated to the NodeMCU specifically temperature & humidity sensor (DHT11), barometric pressure sensor (BMP180) and rain level sensor (FC-37). All the recorded data is used to create graphs on the ThingSpeak platform which can be used to analyse the variations in the environmental parameters. 
+     Index Terms—IoT, ESP8266, Sensors, DHT11, BMP180, FC-37.
+      
+   
+
+
+ 1-INTRODUCTION
+During the beginning of high-speed Internet era, many more humans all across the world have started to get interconnected with each other. Internet of Things (IoT) uses this very interconnection to a step further, but not only joins humans but also electronic instruments which can also now speak amongst themselves as well[1]. With deteriorating prices of Wi-Fi aided setups this trend will not only gather information with further more momentum. The core notion behind the idea of Internet of Things(IoT) is to basically interconnect numerous electronic setups through a network connection and then  the recovered data from these setups which can be further circulated in any way and then upload the recorded sensor information to any cloud server platform where one can also analyze which can also help us to process the recorded data. In the open-platform cloud server anyone can use this sensor’s information to study the variations in the recorded parameters etc.
+
+As earlier stated, IoT allows its user to not only have Human-Human interconnection, as well as to have Human-Device communication but also to have Device-Device communication. This specific progress in the form of newer ways of communications also determine the influence of  fundamentally all other business for instance conveyance & logistics, energy and medical. For sample, this case of energy, IoT  is helpful to produce projects like Smart Grids which could be useful for detection and reply to all the  fluctuations in surrounding as well as with broader levels of variations in energy usage, which is the fundamental portion for any nation’s power  usage policy.
+Seeing yonder the above-mentioned power instance,  there can be many extents of benefits where IoT could make an animated impression for instance, Smart Houses, this involves Internet of Things to amplify the grade of mechanization; such as Habiliment machineries for example modern day touch wristwatches as well as gym machines; One of the major zones of probable development in Internet of Things is interconnected with  medicine.
+Through the worldwide microelectronics giants had previously financed severely in the IoT organization. Including companies like Intel Corp. , Rockwell Automation Corp., Siemens Corp., Cisco and General Electric Corp. the marketplace is arranged to the point for a flareup, with predictors foreseeing there would be around 26 billion interconnected instruments, greater than 3 per humanoid on this earth surface, also this manufacturing is probable for fetch in around $19 trillion, in outlays hoards as well as revenues along multinationals likewise SamsungCorp. and GoogleCorp. at top of the list.
+
+Along the newer high-tech stage still, arises with its particular list of trials as well as complications, for instance what to be done along the mammoth volumes of information which is composed through these sensors. This paper includes events of weather constraints like temperatures, dampness, gravity as well as give access to the recorded data to the open-source platform, ThingSpeak.[2] Inside the cloud-platform the value will be analyzed and if the retrieved data is useful in creating graphs[3]. This data is further analyzed using MATLAB code to four graph to show the visual increase and decrease in the parameters with the data. 
+
+Previously, people who stayed at houses and were demanding with their housework or persons who were busy with their office work pressure had no inkling of the climatic parameters outside their house or office. They usually have no idea whether the outside temperature is high enough, low enough, or normal enough, whether it's raining or not, or what the current humidity value is in the outside atmosphere. This setup will arise to be very handy during these types of conditions. This setup would  also inevitably alert whensoever there will be a cloudburst in the neighboring area and reminded user to bring a parasol or a rain cover coat [4]. This setup would also be able to hail us through good_morning & good_evening posts. The fundamental of the scheme is the ESP8266 built NodeMCU which is very less-slung priced Wi-Fi unit sensor then all these additional sensors which are interconnected with the setup. This Circuit code is inscribed at Arduino IDE and uploaded to the ESP8266 concluded the serialized bus. Once the code is uploaded then the board will be interconnected with Wi-Fi/hotspot and this setup finally starts the work. 
+2-	SYSTEM DESCRIPTION
+Most recently climatic changes and the environmental monitoring systems have received a lot of consideration. This tabloid presents us with three dissimilar Internet of Things based radiocommunication sensors for ecological and weather recording. The earlier mentioned system helps in recording information at isolated places and seeing the variations of all environmental parameter from each sensor with an Internet connection on ThingSpeak graphs.
+3-	DEPLOYMENT CONFIGURATION
+A.	Apparatuses used: Computer hardware
+I.	A ESP8266 a Wi-Fi inbuilt unit NodeMCU[6]
+II.	A Temperature & Humidity Sensor(DHT11)[7]
+III.	A Pressure Sensor(BMP180)[8]
+IV.	A Rain level Module[10]
+V.	Bread Board
+VI.	Male to Male Jumper wires
+B.	Apparatuses used: Computer software
+I.	Arduino IDE version 1.8.19[11]
+II.	Accessible Wi-Fi/hotspot from any server
+III.	ThingSpeak MATLAB based visualizing software.
+
+4-	FLOWCHART 
+This flowchart is used to show us the inside detailed working of the sensors and the internal data flow from the sensor to the nodeMCU to the final graphs seen on the Thingspeak website after the completion of the procedure.
+ 
+Fig. I. The complete Data flowchart
+5-	PROPOSED MODEL
+This proposed setup tracks constraints such as temperature, humidity, rainfall and pressure with the help of sensors in real time. These constraints are nonstop supervised by an open-source stage known as ThingSpeak for an intermission of 1.50 minutes. The retrieved information could be viewed in any one of the three formats available for instance JavaScript Object Notation, Extensible Markup Language and Comma-separated values. These sensors inside this proposed setup collects the required data such as the temperature, humidity, rainfall rate and pressure on the surrounding earth's surface. The Wi-Fi grid is useful in the procedure of conveyance of the recorded information to the open-source stage, ThingSpeak. Over the ThingSpeak platform, the users would be able to talk about the condition of his/her peculiar environment as well as counter-measures could be reserved after the intense observation of the constraints of the surrounding area.
+Fig. II. The whole virtual system of the instrument
+  
+Fig. III. Block Diagram of the setup 
+6-	 SENSORS USED
+A.	NodeMCU
+
+This sensor is the core of the device. This NodeMCU provides us with the stand for IOT to work on. It’s a Wi-Fi based module with ESP8266 firmware inside. All other sensor devices are connected to the micro-controller. They send all the measured values to the NodeMCU and it uploads all the values to the ThingSpeak cloud-server where the information is to be studied. These developers of NodeMCU board are an ESP8266 Open-source Community. NodeMCU has an operating system known as XTOS. CPU has a ESP8266 (LX106). The NodeMCU has an built-in storage of 128 Kbytes which has a memory dimensions of 4 Mbytes.
+ 
+Figure IV. The NodeMCU ESP8266
+
+B.	DHT-11
+
+This Sensor senses the temperature & humidity of the surrounding Atmosphere. The sensor will be a 4-pined setup. The users have to interconnect to the 10,000ohm rheostat is sandwiched among the pin 1 and pin 2. The Pin 1 will be interconnected with a 3.3V pin of this NodeMCU board. This Pin 4 will be interconnected with Ground pin of this NodeMCU board. This Pin 2 will be the output pin where it gives input to the NodeMCU board’s Pin  D4. But the Pin 3 is actually left empty.
+
+ 
+Fig. V. DHT11-Temperature&Humidity Sensor
+ 
+Figure VI. Outcomes of temperature & humidity Sensor’s
+
+C.	BMP180
+
+The BMP180 sensor records the pressure from the neighboring environment. The BMP180 sensor has been actually a I2C typical sensor instrument. This sensor has pin-4 setup, like SDA, SCL, VIN, GND.  The pins Vinput and Ground will be interconnected with 3.3Volts & Ground of the NodeMCU correspondingly. SDA will be interconnected to pin-D2 in NodeMCU board while the NodeMCU board also includes SCL  which will be interconnected with pin-D3.
+ 
+Figure VII. BMP180-Pressure sensor
+ 
+Fig. VIII. The outcomes of pressure sensor
+D. Rainfall Sensor
+This sensor could be useful with finding and measuring for rainfall. The device could be helpful along the measurement of the concentration of the rainfall. The sensors have equally available options for digital result  along with for analog result. These sensors measure both the moistness over analog outcome pin along with as soon as the edge of wetness surpasses excessively as well this offers us with digital yield. The added amount liquid elsewise the minor amount of resistance which meant lesser is the external voltage. Whereas, a smaller amount liquid which meant the larger amount of resistance, high is the output voltage on the non-digital pin. For instance, of fully dehydrated panel that would reason the sensor to outcome of 5V. The analog outcome of  this component would be  interconnected with pin-A0 of the NodeMCU board.
+ 
+Fig. IX. FC-37 Rainfall Sensor
+ 
+Fig. X. The result of rain level
+7-	HARDWARE IMPLEMENTATION
+The hardware of the proposed work consists of NodeMCU interfaced with various sensors like temperature& humidity sensor, barometric pressure sensor as well as rain level valve. A Wi-fi is used to connect the NodeMCU with the internet.
+ 
+Fig. XI. The hardware implementation of the setup
+8-	RESULTS
+After the sensor measurements are uploaded to the ThingSpeak, the data can be examined  using MATLAB graphs with all the data recorded at an interval and visualized with four graphs. The final results are as ensuing as
+ 
+Fig. XII. The result output Graphs of all the parameters
+
+
+9-	CONCLUSION
+This exceptional framework is used to observe wherein how to make use of the numerous sensors for climate tracking are analyzed. Many extra new hoarding strategies may be used by us for the in-addition exam and forecast of our surrounding area. Similar to mentioned framework, many extra structures may be pictured so can fulfill our cutting-edge need.
+10-	FUTURE SCOPE
+This proposed IoT primarily based totally climate station the use of NodeMCU and ThingSpeak can  be changed  to be included with many extra features. We also can upload Light  Intensity sensor and an OLED show to show the encompassing surroundings constraints inside them. We also could upload the Global Positioning System  sensor inside  this  strategy  therefore we will use a  region of encompassing to email or message to  the  consumer alongside the encompassing surroundings  parameters, be like, temperature, humidity, stress, mild depth in future. The module also can be changed such that each time a message or e mail is dispatched from a selected telecellsmartphone variety or e mail identity entification of the server, along with the surrounding ecological constraints of this module alongside its precise region might be added to that specific telecellsmartphone variety or e mail identity entification. This specific module also can be useful for the screen of a specific rooms or area’s whose ecological constraints are vital to be observed through us.
+
+
+
+
+
+ 
+
